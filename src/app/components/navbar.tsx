@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { useTheme } from "next-themes";
 import "material-icons/iconfont/material-icons.css";
 import Image from "next/image";
+import Link from "next/link";
 
 const Navbar: React.FC = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -56,36 +57,36 @@ const Navbar: React.FC = () => {
       >
         <ul className="flex max-sm:flex-col items-center sm:justify-center gap-1 sm:gap-10 list-none">
           <li className="max-sm:w-full max-sm:p-2 max-sm:bg-white/30">
-            <a
+            <Link
               href="/"
               className="w-full h-full font-bold text-lg flex items-center justify-center"
             >
               Home
-            </a>
+            </Link>
           </li>
           <li className="max-sm:w-full max-sm:p-2 max-sm:bg-white/30">
-            <a
+            <Link
               href="/register"
               className="w-full h-full font-bold text-lg flex items-center justify-center"
             >
               Register
-            </a>
+            </Link>
           </li>
           <li className="max-sm:w-full max-sm:p-2 max-sm:bg-white/30">
-            <a
+            <Link
               href="/"
               className="w-full h-full font-bold text-lg flex items-center justify-center"
             >
               About
-            </a>
+            </Link>
           </li>
           <li className="max-sm:w-full max-sm:p-2 max-sm:bg-white/30">
-            <a
+            <Link
               href="/"
               className="w-full h-full font-bold text-lg flex items-center justify-center"
             >
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
