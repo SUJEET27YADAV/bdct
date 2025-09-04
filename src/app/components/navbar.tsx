@@ -14,13 +14,16 @@ const Navbar: React.FC = () => {
   useEffect(() => {
     if (drawerOpen) {
       const handleDrawerClose = (event: MouseEvent) => {
-        if (
-          dref.current &&
-          dbref.current &&
-          !dref.current.contains(event.target as Node) &&
-          !dbref.current.contains(event.target as Node)
-        ) {
-          setDrawerOpen(false);
+        if (dref.current && dbref.current) {
+          const db = dbref.current;
+          const d = dref.current;
+          if (
+            !db.contains(event.target as Node) &&
+            (!d.contains(event.target as Node) ||
+              (event.target as HTMLElement).closest("#list"))
+          ) {
+            setDrawerOpen(false);
+          }
         }
       };
 
@@ -55,7 +58,10 @@ const Navbar: React.FC = () => {
           drawerOpen ? "max-sm:block" : "max-sm:hidden"
         }`}
       >
-        <ul className="flex max-sm:flex-col items-center sm:justify-center gap-1 sm:gap-10 list-none">
+        <ul
+          id="list"
+          className="flex max-sm:flex-col items-center sm:justify-center gap-1 sm:gap-10 list-none"
+        >
           <li className="max-sm:w-full max-sm:p-2 max-sm:bg-white/30">
             <Link
               href="/"
