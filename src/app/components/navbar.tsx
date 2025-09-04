@@ -32,7 +32,7 @@ const Navbar: React.FC = () => {
   }, [drawerOpen]);
 
   return (
-    <nav className="sticky top-0 z-50 px-2 sm:px-5 flex items-center justify-between bg-slate-400">
+    <nav className="sticky top-0 z-50 max-h-16 px-2 sm:px-5 flex items-center justify-between bg-slate-400 overflow-hidden">
       <button
         ref={dbref}
         className="max-sm:flex hidden items-center justify-center cursor-pointer"
