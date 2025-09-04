@@ -60,7 +60,7 @@ const RegistrationForm: React.FC = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="w-[96%] sm:max-w-[600px] mx-auto p-4 bg-gray-400/30 dark:bg-gray-100/30 backdrop-blur-sm drop-shadow-xl rounded shadow-md"
+      className="w-[96%] sm:max-w-[600px] mx-auto p-4 bg-gray-400/50 dark:bg-gray-100/30 backdrop-blur-md drop-shadow-xl rounded shadow-md"
     >
       <h2 className="w-full text-center text-lg font-bold mb-2">
         Please enter your details :

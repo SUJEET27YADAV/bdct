@@ -22,5 +22,5 @@
 }
 
 body {
-  @apply bg-gradient-to-br from-green-100 via-green-200 to-green-400 text-zinc-700 dark:bg-gradient-to-br dark:from-[#0f2027] dark:via-[#2c5364] dark:to-[#145a32] dark:text-zinc-300;
+  @apply bg-gradient-to-br from-green-400 via-green-200 to-green-100 text-zinc-700 dark:bg-gradient-to-br dark:from-[#0f2027] dark:via-[#2c5364] dark:to-[#145a32] dark:text-zinc-300;
 }

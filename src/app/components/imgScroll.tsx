@@ -33,7 +33,7 @@ export default function ImgScroll() {
       >
         <span className="material-icons-outlined text-9xl">chevron_left</span>
       </button>
-      <div className="relative w-[80%] h-full flex items-center justify-center rounded-xl overflow-hidden bg-zinc-400 dark:bg-zinc-900">
+      <div className="relative w-[80%] h-full flex items-center justify-center rounded-xl overflow-hidden bg-zinc-400/30 dark:bg-zinc-800/30 backdrop-blur-md drop-shadow-xl">
         <Image
           src={images[current]}
           alt={`Image ${current + 1}`}
