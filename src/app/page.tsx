@@ -17,13 +17,13 @@ const Home: React.FC = () => {
       >
         Register Now
       </Link>
-      <Image
+      {/* <Image
         src="/bdcs.png"
         alt="Bhawani Dutt Cricket Stadium"
         width={1395}
         height={800}
         className="absolute inset-0 object-cover -z-10"
-      />
+      /> */}
     </div>
   );
 };
