@@ -60,7 +60,7 @@ const RegistrationForm: React.FC = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="min-w-[600px] mx-auto p-4 bg-gray-400/30 dark:bg-gray-100/30 backdrop-blur-sm drop-shadow-xl rounded shadow-md"
+      className="w-[96%] sm:max-w-[600px] mx-auto p-4 bg-gray-400/30 dark:bg-gray-100/30 backdrop-blur-sm drop-shadow-xl rounded shadow-md"
     >
       <h2 className="w-full text-center text-lg font-bold mb-2">
         Please enter your details :
@@ -94,7 +94,7 @@ const RegistrationForm: React.FC = () => {
         <Input label="Email" type="email" val={email} setVal={setEmail} />
       </div>
       <p className="font-bold mb-1">Trial Date :</p>
-      <div className="flex items-center justify-between mb-2">
+      <div className="grid grid-cols-3 sm:grid-cols-5 gap-2 sm:gap-4 mb-2">
         {dates.map((date, i) => (
           <button
             key={i}
@@ -112,7 +112,7 @@ const RegistrationForm: React.FC = () => {
         ))}
       </div>
       <p className="font-bold mb-1">Trial Slot :</p>
-      <div className="flex items-center justify-between mb-2">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-4 mb-2">
         {slots.map((slot, i) => (
           <button
             key={i}
