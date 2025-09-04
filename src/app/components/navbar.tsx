@@ -3,7 +3,6 @@ import { useEffect, useRef, useState } from "react";
 import { useTheme } from "next-themes";
 import "material-icons/iconfont/material-icons.css";
 import Image from "next/image";
-import Link from "next/link";
 
 const Navbar: React.FC = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -32,7 +31,7 @@ const Navbar: React.FC = () => {
   }, [drawerOpen]);
 
   return (
-    <nav className="sticky top-0 z-50 px-2 sm:px-5 flex items-center justify-between bg-slate-400 overflow-hidden">
+    <nav className="sticky top-0 z-50 px-2 sm:px-5 flex items-center justify-between bg-slate-400">
       <button
         ref={dbref}
         className="max-sm:flex hidden items-center justify-center cursor-pointer"
@@ -51,42 +50,42 @@ const Navbar: React.FC = () => {
       </div>
       <div
         ref={dref}
-        className={`max-sm:absolute max-sm:left-0 max-sm:top-16 max-sm:w-1/2 max-sm:h-screen max-sm:bg-gray-400/60 max-sm:dark:bg-gray-700/60 max-sm:backdrop-blur-lg max-sm:drop-shadow-xl max-sm:z-30 ${
+        className={`max-sm:absolute max-sm:left-0 max-sm:top-16 max-sm:w-1/2 max-sm:h-screen max-sm:bg-gray-400/40 max-sm:dark:bg-gray-700/40 max-sm:z-30 max-sm:backdrop-blur-md max-sm:drop-shadow-xl ${
           drawerOpen ? "max-sm:block" : "max-sm:hidden"
         }`}
       >
         <ul className="flex max-sm:flex-col items-center sm:justify-center gap-1 sm:gap-10 list-none">
           <li className="max-sm:w-full max-sm:p-2 max-sm:bg-white/30">
-            <Link
+            <a
               href="/"
               className="w-full h-full font-bold text-lg flex items-center justify-center"
             >
               Home
-            </Link>
+            </a>
           </li>
           <li className="max-sm:w-full max-sm:p-2 max-sm:bg-white/30">
-            <Link
+            <a
               href="/register"
               className="w-full h-full font-bold text-lg flex items-center justify-center"
             >
               Register
-            </Link>
+            </a>
           </li>
           <li className="max-sm:w-full max-sm:p-2 max-sm:bg-white/30">
-            <Link
+            <a
               href="/"
               className="w-full h-full font-bold text-lg flex items-center justify-center"
             >
               About
-            </Link>
+            </a>
           </li>
           <li className="max-sm:w-full max-sm:p-2 max-sm:bg-white/30">
-            <Link
+            <a
               href="/"
               className="w-full h-full font-bold text-lg flex items-center justify-center"
             >
               Contact
-            </Link>
+            </a>
           </li>
         </ul>
       </div>
