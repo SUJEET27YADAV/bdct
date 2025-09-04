@@ -2,14 +2,8 @@
 import React, { useState } from "react";
 import Input from "./input";
 import Dropdown from "./dropdown";
+import { Category, Role } from "@/types";
 
-enum Role {
-  AllRounder = "All Rounder",
-  Batsman = "Batsman",
-  FastBowler = "Fast Bowler",
-  Spinner = "Spinner",
-  WicketKeeper = "Wicket Keeper",
-}
 const dates = [
   "21-09-2025",
   "22-09-2025",
@@ -29,10 +23,8 @@ const RegistrationForm: React.FC = () => {
   const [email, setEmail] = useState("");
   const [age, setAge] = useState("");
   const [phone, setPhone] = useState("");
-  const [category, setCategory] = useState<"Professional" | "Corporate">(
-    "Corporate"
-  );
-  const [role, setRole] = useState<Role>("Batsman" as Role);
+  const [category, setCategory] = useState<Category>(Category.Corporate);
+  const [role, setRole] = useState<Role>(Role.Batsman);
   const [trialDate, setTrialDate] = useState("21-09-2025");
   const [trialSlot, setTrialSlot] = useState(0);
 
@@ -76,15 +68,19 @@ const RegistrationForm: React.FC = () => {
       <div className="flex gap-2 mb-2">
         <Dropdown
           label="Category"
-          options={["Corporate", "Professional"]}
+          options={[Category.Corporate, Category.Professional]}
           val={category}
-          setVal={setCategory}
+          setVal={
+            setCategory as React.Dispatch<React.SetStateAction<Category | Role>>
+          }
         />
         <Dropdown
           label="Role"
           options={Object.values(Role)}
           val={role}
-          setVal={setRole}
+          setVal={
+            setRole as React.Dispatch<React.SetStateAction<Category | Role>>
+          }
         />
       </div>
       <div className="flex gap-2 mb-2">
@@ -123,7 +119,7 @@ const RegistrationForm: React.FC = () => {
             className={`flex items-center justify-center text-sm font-bold rounded p-2 transition-all duration-300 ${
               trialSlot === i
                 ? "bg-orange-500 dark:bg-orange-700 text-white"
-                : "border border-gray-300 dark:border-white hover:bg-orange-200 dark:hover:bg-orange-700/60"
+                : "border border-gray-300 dark:border-white hover:bg-orange-200 dark:hover:bg-orange-700/40"
             }`}
             type="button"
             onClick={() => setTrialSlot(i)}

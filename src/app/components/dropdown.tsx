@@ -1,10 +1,11 @@
 import React, { useState } from "react";
+import { Category, Role } from "@/types";
 
 type props = {
   label: string;
   val: string | number;
-  setVal: React.Dispatch<React.SetStateAction<any>>;
-  options: string[];
+  setVal: React.Dispatch<React.SetStateAction<Category | Role>>;
+  options: (Category | Role)[];
 };
 
 export default function Dropdown({ label, val, setVal, options }: props) {
