@@ -25,7 +25,7 @@ export default function ImgScroll() {
   }, []);
 
   return (
-    <div className="relative w-full py-2 flex flex-col items-center justify-center gap-2">
+    <div className="w-full h-[40dvh] sm:h-[70dvh] py-2 flex flex-col items-center justify-center gap-1 sm:gap-2">
       <button
         onClick={prevImage}
         className="absolute left-[5%] transform -translate-x-1/2 p-1 z-10 flex items-center justify-center rounded-full bg-gray-400/30 dark:bg-gray-100/30 hover:bg-gray-400 dark:hover:bg-gray-100"
@@ -33,13 +33,13 @@ export default function ImgScroll() {
       >
         <span className="material-icons-outlined text-9xl">chevron_left</span>
       </button>
-      <div className="w-[80%] rounded-xl overflow-hidden">
+      <div className="relative w-[80%] h-full flex items-center justify-center rounded-xl overflow-hidden bg-zinc-400 dark:bg-zinc-900">
         <Image
           src={images[current]}
           alt={`Image ${current + 1}`}
-          width={800}
-          height={400}
-          className="object-cover"
+          width={1980}
+          height={1080}
+          className="h-full object-contain"
         />
       </div>
       <button
@@ -49,7 +49,7 @@ export default function ImgScroll() {
       >
         <span className="material-icons-outlined text-9xl">chevron_right</span>
       </button>
-      <div className="w-full h-10 flex items-center justify-center gap-2">
+      <div className="flex items-center justify-center gap-2">
         {images.map((_, idx) => (
           <button
             key={idx}
