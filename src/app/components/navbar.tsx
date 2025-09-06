@@ -22,7 +22,13 @@ const Navbar: React.FC = () => {
             (!d.contains(event.target as Node) ||
               (event.target as HTMLElement).closest("#list"))
           ) {
-            setDrawerOpen(false);
+            if ((event.target as HTMLElement).closest("#list")) {
+              setTimeout(() => {
+                setDrawerOpen(false);
+              }, 500);
+            } else {
+              setDrawerOpen(false);
+            }
           }
         }
       };

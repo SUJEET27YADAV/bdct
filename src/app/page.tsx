@@ -21,13 +21,26 @@ const Home: React.FC = () => {
           Register Now
         </Link>
       </div>
-      <div className="w-full flex items-center justify-between px-10 py-20 bg-[url('/ball.png')] bg-cover bg-center">
-        <p className="w-[42%] text-center text-5xl text-lime-500 font-bold uppercase">
-          Where Every <span className="text-9xl">Ball</span> Tells a{" "}
-          <span className="text-9xl">Story!</span>
-        </p>
-        <div className="w-[56%] flex flex-col items-end justify-center gap-5">
-          <p className="text-center text-red-300">
+      <div className="relative w-full flex max-sm:flex-col sm:items-center sm:justify-between px-3 sm:px-10 py-6 sm:py-30 overflow-hidden">
+        <Image
+          src="/ball.png"
+          alt="image"
+          width={1536}
+          height={1024}
+          className="absolute left-0 -z-10 object-cover opacity-90 dark:opacity-100"
+        />
+        <div className="w-full sm:w-[45%] flex flex-wrap max-sm:justify-center max-sm:gap-1 items-center sm:flex-col text-2xl sm:text-5xl text-lime-500 font-bold sm:uppercase">
+          <p className="w-fit">
+            Where <span className="sm:text-8xl">every</span>
+          </p>
+          <p className="max-sm:flex max-sm:gap-1">
+            <span className="sm:text-9xl">Ball</span>
+            <span>tells a</span>
+          </p>
+          <span className="sm:text-9xl">Story!</span>
+        </div>
+        <div className="w-full sm:w-[50%] flex flex-col items-end justify-center gap-0.5 sm:gap-5">
+          <p className="w-full text-center text-white sm:text-red-300 max-sm:text-[10.5px]">
             The Bhawani Dutt Cricket Tournament is more than just a
             competition—it&apos;s a celebration of cricket&apos;s spirit,
             teamwork, and passion. Whether you&apos;re a seasoned player or a
@@ -40,13 +53,16 @@ const Home: React.FC = () => {
           </p>
           <Link
             href="\aboutus"
-            className="flex items-center justify-center gap-1 p-2 rounded-lg bg-gray-200 dark:bg-gray-900 font-bold"
+            className="flex items-center justify-center px-2 sm:p-2 rounded-lg bg-gray-200 dark:bg-gray-900 max-sm:text-[10px]"
           >
-            <span>More Info</span>
-            <span className="material-icons-outlined">arrow_right</span>
+            <span className="hover:underline">More Info</span>
+            <span className="material-icons-outlined text-[8px]">
+              chevron_right
+            </span>
           </Link>
         </div>
       </div>
+      <div className="w-full h-30 flex flex-col items-center justify-center"></div>
     </div>
   );
 };
