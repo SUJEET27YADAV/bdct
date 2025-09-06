@@ -8,15 +8,15 @@ export default function AboutUs() {
         unique story.
       </p>
       <p className="">
-        The Bhawani Dutt Cricket Tournament is more than just a competition—it's
-        a celebration of cricket's spirit, teamwork, and passion. Whether you're
-        a seasoned player or a newcomer, this tournament offers a platform to
-        showcase your skills, connect with fellow enthusiasts, and create
-        unforgettable memories on and off the field. Every match is an
-        opportunity to write your own chapter in our cricketing legacy. Join us
-        to experience the thrill, camaraderie, and excitement that make every
-        ball count. Register now and be part of a community where every moment
-        matters!
+        The Bhawani Dutt Cricket Tournament is more than just a
+        competition—it&apos;s a celebration of cricket&apos;s spirit, teamwork,
+        and passion. Whether you&apos;re a seasoned player or a newcomer, this
+        tournament offers a platform to showcase your skills, connect with
+        fellow enthusiasts, and create unforgettable memories on and off the
+        field. Every match is an opportunity to write your own chapter in our
+        cricketing legacy. Join us to experience the thrill, camaraderie, and
+        excitement that make every ball count. Register now and be part of a
+        community where every moment matters!
       </p>
       <p className="">
         The Bhawani Dutt Cricket Tournament (BDCT) is dedicated to nurturing
