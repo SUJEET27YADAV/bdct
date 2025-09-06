@@ -80,7 +80,7 @@ const Navbar: React.FC = () => {
           </li>
           <li className="max-sm:w-full max-sm:p-2 max-sm:bg-white/30">
             <Link
-              href="/"
+              href="/aboutus"
               className="w-full h-full font-bold text-lg flex items-center justify-center"
             >
               About
