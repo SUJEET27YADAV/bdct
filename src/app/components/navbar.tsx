@@ -51,7 +51,7 @@ const Navbar: React.FC = () => {
       </button>
       <div className="flex items-center justify-center">
         <Image
-          src="/logo2.png"
+          src="/logo.png"
           alt="Bhawani Dutt Cricket Stadium"
           width={1200}
           height={1200}

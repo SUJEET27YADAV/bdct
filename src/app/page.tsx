@@ -2,17 +2,22 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import ImgScroll from "./components/imgScroll";
+import Footer from "./components/footer";
 
 const Home: React.FC = () => {
   return (
-    <div className="relative flex flex-col items-center gap-5 min-h-[calc(100dvh-(--spacing(16)))]">
-      <ImgScroll />
-      <div className="w-full flex flex-col items-center justify-center">
-        <h1 className="w-full text-center text-3xl sm:text-4xl font-bold mt-4 mb-4">
-          Welcome to the Bhawani Dutt Cricket Tournament
+    <div className="relative flex flex-col items-center gap-2 min-h-[calc(100dvh-(--spacing(16)))]">
+      <div className="w-full flex flex-col items-center p-4">
+        <h1 className="w-full flex flex-col items-center pb-2 font-bold">
+          <span className="text-xl sm:text-4xl">Welcome to</span>
+          <p className="flex flex-col sm:flex-row flex-wrap sm:gap-2 sm:justify-center items-center">
+            <span className="text-3xl sm:text-4xl">Bhawani Dutt</span>
+            <span className="text-2xl sm:text-4xl">Cricket Stadium</span>
+          </p>
         </h1>
-        <p className="w-full text-center text-lg mb-8">
-          Register now to participate in the tournament!
+        <ImgScroll />
+        <p className="w-full text-center text-lg py-4">
+          Register now to participate in upcomming the tournament!
         </p>
         <Link
           href="/register"
@@ -21,13 +26,14 @@ const Home: React.FC = () => {
           Register Now
         </Link>
       </div>
-      <div className="relative w-full flex max-sm:flex-col sm:items-center sm:justify-between px-3 sm:px-10 py-6 sm:py-30 overflow-hidden">
+      {/* <div className="relative w-full flex max-sm:flex-col sm:items-center sm:justify-between px-3 sm:px-10 py-6 sm:py-30 overflow-hidden"> */}
+      <div className="relative flex flex-col sm:flex-row items-center justify-between px-3 py-6 sm:px-10 sm:py-30 overflow-hidden">
         <Image
           src="/ball.png"
           alt="image"
           width={1536}
           height={1024}
-          className="absolute left-0 -z-10 object-cover opacity-90 dark:opacity-100"
+          className="absolute left-0 -z-10 max-sm:h-full sm:object-cover opacity-90 dark:opacity-100"
         />
         <div className="w-full sm:w-[45%] flex flex-wrap max-sm:justify-center max-sm:gap-1 items-center sm:flex-col text-2xl sm:text-5xl text-lime-500 font-bold sm:uppercase">
           <p className="w-fit">
@@ -62,7 +68,7 @@ const Home: React.FC = () => {
           </Link>
         </div>
       </div>
-      <div className="w-full h-30 flex flex-col items-center justify-center"></div>
+      <Footer />
     </div>
   );
 };
