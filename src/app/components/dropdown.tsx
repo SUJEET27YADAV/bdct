@@ -17,7 +17,7 @@ export default function Dropdown({ label, val, setVal, options }: props) {
         onClick={() => setIsFocused(!isFocused)}
       >
         <label
-          className={`absolute left-1 top-0.5 text-[12px] font-bold transition-all duration-500`}
+          className={`absolute left-1 top-0.5 text-[12px] font-bold transition-all duration-500 text-zinc-700/70 dark:text-white/60`}
         >
           {label + " :"}
         </label>

@@ -1,6 +1,6 @@
 export default function AboutUs() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-[calc(100dvh-(--spacing(16)))] p-4 gap-4">
+    <main className="max-w-3xl mx-auto px-4 py-8 flex flex-col items-center justify-center gap-4 text-justify">
       <h1 className="text-2xl font-bold">About Us</h1>
       <p className="">
         Welcome to the Bhawani Dutt Cricket Tournament (BDCT) - Where Champions
@@ -38,6 +38,6 @@ export default function AboutUs() {
         unite champions, inspire legends, and make every ball count—on and off
         the field.
       </p>
-    </div>
+    </main>
   );
 }

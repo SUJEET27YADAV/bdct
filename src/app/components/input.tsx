@@ -16,7 +16,7 @@ export default function Input({ label, type, val, setVal }: props) {
           isFocused || val != ""
             ? "absolute left-1 top-0.5 text-[12px]"
             : "hidden"
-        } font-bold transition-all duration-500`}
+        } font-bold transition-all duration-500 text-zinc-700/70 dark:text-white/60`}
       >
         {label + " :"}
       </label>
