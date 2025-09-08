@@ -14,7 +14,9 @@ export default function Footer() {
         />
         <div className="w-full flex flex-col sm:flex-row max-sm:pb-2">
           <div className="w-full flex flex-col sm:items-center py-1 sm:my-2 sm:border-r-3 sm:border-zinc-700/50 dark:sm:border-zinc-300/50">
-            <h2 className="font-bold text-xl sm:text-3xl pb-2">Quick Links</h2>
+            <h2 className="font-bold text-xl sm:text-3xl pb-1 sm:pb-3">
+              Quick Links
+            </h2>
             <ul className="list-disc max-sm:text-sm px-4 sm:px-0">
               <li className="">
                 <Link href="/aboutus" className="">
@@ -39,7 +41,9 @@ export default function Footer() {
             </ul>
           </div>
           <div className="w-full flex flex-col sm:items-center py-1 sm:my-2 sm:border-r-3 sm:border-zinc-700/50 dark:sm:border-zinc-300/50">
-            <h2 className="font-bold text-xl sm:text-3xl">Policies</h2>
+            <h2 className="font-bold text-xl sm:text-3xl pb-1 sm:pb-3">
+              Policies
+            </h2>
             <ul className="list-disc max-sm:text-sm px-4 sm:px-0">
               <li className="">
                 <Link href="/termsnconditions" className="">
@@ -54,7 +58,9 @@ export default function Footer() {
             </ul>
           </div>
           <div className="w-full flex flex-col sm:items-center py-1 sm:py-5">
-            <h2 className="font-bold text-xl sm:text-3xl">Contact us</h2>
+            <h2 className="font-bold text-xl sm:text-3xl pb-1 sm:pb-3">
+              Contact us
+            </h2>
             <ul className="list-disc max-sm:text-sm px-4 sm:px-0">
               <li className="">
                 <Link href="mailto:support@bdcs.com" className="">

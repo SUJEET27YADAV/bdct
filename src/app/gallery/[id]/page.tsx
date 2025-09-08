@@ -33,12 +33,12 @@ export default function GalleryItemPage() {
     }
   }, [params.id, router, cat]);
   return (
-    <main className="w-full px-8 py-4">
+    <main className="w-full p-4 sm:px-8">
       {!item ? (
         <div className="w-[90dvw] mx-auto space-y-1">
-          <h1 className="w-[70dvw] sm:w-[40dvw] h-12 bg-zinc-900/50 dark:bg-zinc-400/50 animate-pulse rounded-md" />
-          <div className="w-[90dvw] h-auto sm:w-[54dvw] sm:h-[30dvw] bg-zinc-800/40 dark:bg-zinc-400/50 animate-pulse rounded-md" />
-          <p className="w-[90dvw] sm:w-[60dvw] h-18 bg-zinc-900/50 dark:bg-zinc-400/50 animate-pulse rounded-md" />
+          <h1 className="w-[70dvw] sm:w-[40dvw] h-12 bg-zinc-400/80 dark:bg-zinc-400/50 animate-pulse rounded-md" />
+          <div className="w-[90dvw] h-[51dvw] sm:w-[54dvw] sm:h-[30dvw] bg-zinc-400/90 dark:bg-zinc-400/50 animate-pulse rounded-md" />
+          <p className="w-[90dvw] sm:w-[60dvw] h-18 bg-zinc-400/80 dark:bg-zinc-400/50 animate-pulse rounded-md" />
         </div>
       ) : (
         <div className="max-w-[90dvw] mx-auto flex flex-col justify-center gap-1">
