@@ -4,39 +4,40 @@ import { useEffect, useState } from "react";
 import { imageData } from "../page";
 import { GalleryItem } from "@/types";
 import Image from "next/image";
-import temp from "@/../public/template.png";
 
 export default function GalleryItemPage() {
   const params = useParams();
   const router = useRouter();
   const [item, setItem] = useState<GalleryItem | null>(null);
-  if (!params.id) {
-    // redirect to 404
-    return router.push("/404");
-  }
-  const id = params.id!;
-  // fetch the gallery item using the id from db
-  //....
-  //temporarily setting src
-  const cat = id.slice(0, 3);
-  const nid = Number(id.slice(3));
+  const [cat, setCat] = useState<string | null>(null);
+
   useEffect(() => {
-    if (cat === "img") {
-      setItem(imageData[nid]);
-    } else if (cat === "vid") {
-      setItem(imageData[nid]); // set from video data
+    if (
+      !params.id ||
+      params.id.length < 4 ||
+      (params.id.slice(0, 3) !== "img" && params.id.slice(0, 3) !== "vid")
+    ) {
+      router.push("/404");
     } else {
-      // redirect to 404
-      setItem(null);
-      return router.push("/404");
+      const id = params.id;
+      // fetch the gallery item using the id from db
+      //....
+      //temporarily setting src
+      setCat(id.slice(0, 3) as string);
+      const nid = Number(id.slice(3));
+      if (cat === "img") {
+        setItem(imageData[nid]);
+      } else if (cat === "vid") {
+        setItem(imageData[nid]); // set from video data
+      }
     }
-  }, [cat, nid]);
+  }, [params.id, router, cat]);
   return (
     <main className="w-full px-8 py-4">
       {!item ? (
         <div className="w-[90dvw] mx-auto space-y-1">
           <h1 className="w-[70dvw] sm:w-[40dvw] h-12 bg-zinc-900/50 dark:bg-zinc-400/50 animate-pulse rounded-md" />
-          <div className="w-[90dvw] h-[51dvw] sm:w-[60dvw] sm:h-[33dvw] bg-zinc-900/50 dark:bg-zinc-400/50 animate-pulse rounded-md" />
+          <div className="w-[90dvw] h-auto sm:w-[54dvw] sm:h-[30dvw] bg-zinc-800/40 dark:bg-zinc-400/50 animate-pulse rounded-md" />
           <p className="w-[90dvw] sm:w-[60dvw] h-18 bg-zinc-900/50 dark:bg-zinc-400/50 animate-pulse rounded-md" />
         </div>
       ) : (
