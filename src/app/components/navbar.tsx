@@ -94,10 +94,18 @@ const Navbar: React.FC = () => {
           </li>
           <li className="max-sm:w-full max-sm:p-2 max-sm:bg-white/30">
             <Link
-              href="/"
+              href="/contactus"
               className="w-full h-full font-bold text-lg flex items-center justify-center"
             >
               Contact
+            </Link>
+          </li>
+          <li className="max-sm:w-full max-sm:p-2 max-sm:bg-white/30">
+            <Link
+              href="/gallery"
+              className="w-full h-full font-bold text-lg flex items-center justify-center"
+            >
+              Gallery
             </Link>
           </li>
         </ul>

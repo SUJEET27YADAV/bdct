@@ -100,7 +100,9 @@ export default function PrivacyPolicy() {
         external sites. Please review their privacy policies before engaging
         with them.
       </p>
-      <h2 className="text-xl font-semibold mt-6 mb-2">7. Children's Privacy</h2>
+      <h2 className="text-xl font-semibold mt-6 mb-2">
+        7. Children&apos;s Privacy
+      </h2>
       <p className="mb-4">
         Our services are not intended for individuals under the age of 18. We do
         not knowingly collect personal information from children. If you believe

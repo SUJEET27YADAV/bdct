@@ -28,7 +28,7 @@ export default function Footer() {
               </li>
               <li className="">
                 <Link href="/gallery" className="">
-                  Picture galarey
+                  Gallery
                 </Link>
               </li>
               <li className="">

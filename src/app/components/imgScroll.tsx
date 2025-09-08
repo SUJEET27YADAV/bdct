@@ -5,7 +5,6 @@ import img2 from "@/../public/5.jpg";
 import img3 from "@/../public/20.jpg";
 import img4 from "@/../public/23.jpg";
 import Image from "next/image";
-import { int } from "drizzle-orm/mysql-core";
 
 const images = [img1.src, img2.src, img3.src, img4.src];
 

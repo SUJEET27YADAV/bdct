@@ -21,3 +21,10 @@ export interface Player {
   trialSlot: number;
   hasPaid: boolean;
 }
+
+export type GalleryItem = {
+  id: string;
+  title: string;
+  description: string;
+  src: string;
+};

@@ -21,10 +21,10 @@
   --font-mono: var(--font-geist-mono);
 }
 
-/* body {
-  @apply bg-gradient-to-b from-indigo-300 via-green-500 via-yellow-200 via-green-500 to-yellow-200 text-zinc-700 dark:bg-gradient-to-br dark:from-[#0f2027] dark:via-[#2c5364] dark:to-[#145a32] dark:text-zinc-300;
-} */
+@theme {
+  --breakpoint-3xl: 120rem; /* 1920px */
+}
 
 body {
-  @apply bg-[linear-gradient(to_bottom,_#fef08a,#a5b4fc_10%,_#bfdbfe_30%,_#22c55e_35%,_#fef08a_60%,_#22c55e_65%,_#fef08a)] text-zinc-700 dark:bg-gradient-to-br dark:from-[#0f2027] dark:via-[#2c5364] dark:to-[#145a32] dark:text-zinc-300;
+  @apply bg-gradient-to-b from-indigo-300 via-green-400 to-yellow-200 text-zinc-700 dark:bg-gradient-to-br dark:from-[#0f2027] dark:via-[#2c5364] dark:to-[#145a32] dark:text-zinc-300;
 }
