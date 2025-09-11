@@ -4,18 +4,8 @@ import { players } from "@/db/schema";
 
 export async function POST(req: NextRequest) {
   try {
-    const { category, role, name, age, email, phone, traildate, trailslot } =
-      await req.json();
-    if (
-      !category ||
-      !role ||
-      !name ||
-      !age ||
-      !email ||
-      !phone ||
-      !traildate ||
-      !trailslot
-    ) {
+    const { name, age, team, contact } = await req.json();
+    if (!name || !age || !team || !contact) {
       return NextResponse.json(
         { error: "All fields are required!" },
         { status: 400 }
@@ -23,7 +13,7 @@ export async function POST(req: NextRequest) {
     }
     const result = await db
       .insert(players)
-      .values({ category, role, name, age, email, phone, traildate, trailslot })
+      .values({ name, age: Number(age), team, contact })
       .returning();
     return NextResponse.json({ player: result[0] });
   } catch (e) {

@@ -1,25 +1,30 @@
-export enum Category {
-  Corporate = "Corporate",
-  Professional = "Professional",
-}
-export enum Role {
-  AllRounder = "All Rounder",
-  Batsman = "Batsman",
-  FastBowler = "Fast Bowler",
-  Spinner = "Spinner",
-  WicketKeeper = "Wicket Keeper",
-}
+import { pgEnum } from "drizzle-orm/pg-core";
+
+const catVals = ["Corporate", "Professional"] as const;
+export const catEnum = pgEnum("category", catVals);
+export type Category = (typeof catVals)[number];
+
+const roleVals = [
+  "All Rounder",
+  "Batsman",
+  "Fast Bowler",
+  "Spinner",
+  "Wicket Keeper",
+] as const;
+export const roleEnum = pgEnum("role", roleVals);
+export type Role = (typeof roleVals)[number];
 
 export interface Player {
+  id: string;
   category: Category;
   role: Role;
   name: string;
   email: string;
   age: number;
   phone: string;
-  trialDate: string;
-  trialSlot: number;
-  hasPaid: boolean;
+  trialdate: string;
+  trialslot: number;
+  haspaid: boolean;
 }
 
 export type GalleryItem = {

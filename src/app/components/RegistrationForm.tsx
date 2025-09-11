@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Input from "./input";
 import Dropdown from "./dropdown";
-import { Category, Role } from "@/types";
+import { Category, Role, roleEnum } from "@/types";
 
 const dates = [
   "21-09-2025",
@@ -23,8 +23,8 @@ const RegistrationForm: React.FC = () => {
   const [email, setEmail] = useState("");
   const [age, setAge] = useState("");
   const [phone, setPhone] = useState("");
-  const [category, setCategory] = useState<Category>(Category.Corporate);
-  const [role, setRole] = useState<Role>(Role.Batsman);
+  const [category, setCategory] = useState<Category>("Corporate");
+  const [role, setRole] = useState<Role>("Batsman");
   const [trialDate, setTrialDate] = useState("21-09-2025");
   const [trialSlot, setTrialSlot] = useState(0);
 
@@ -68,7 +68,7 @@ const RegistrationForm: React.FC = () => {
       <div className="flex gap-2 mb-2">
         <Dropdown
           label="Category"
-          options={[Category.Corporate, Category.Professional]}
+          options={["Corporate", "Professional"]}
           val={category}
           setVal={
             setCategory as React.Dispatch<React.SetStateAction<Category | Role>>
@@ -76,7 +76,7 @@ const RegistrationForm: React.FC = () => {
         />
         <Dropdown
           label="Role"
-          options={Object.values(Role)}
+          options={Object.values(roleEnum)}
           val={role}
           setVal={
             setRole as React.Dispatch<React.SetStateAction<Category | Role>>

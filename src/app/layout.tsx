@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { LoggedinContextProvider } from "@/context/logincontext";
 import { ThemeProvider } from "next-themes";
 import Navbar from "./components/navbar";
 import "./globals.css";
@@ -16,8 +17,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "BDCT",
-  description: "Bhawani Dutt Cricket Tournament",
+  title: "BDCS",
+  description: "Bhawani Dutt Cricket Stadium",
 };
 
 export default function RootLayout({
@@ -30,11 +31,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <Navbar />
-          {children}
-          <Footer />
-        </ThemeProvider>
+        <LoggedinContextProvider>
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+            <Navbar />
+            {children}
+            <Footer />
+          </ThemeProvider>
+        </LoggedinContextProvider>
       </body>
     </html>
   );
